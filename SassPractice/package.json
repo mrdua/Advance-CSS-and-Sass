@@ -1,0 +1,14 @@
+{
+  "name": "sasspractice",
+  "version": "1.0.0",
+  "description": "Sass practice",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  },
+  "author": "Harmandeep Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
