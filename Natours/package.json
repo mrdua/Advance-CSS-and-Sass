@@ -4,7 +4,7 @@
   "description": "Project is build using Advance CSS and Sass",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Harman",
   "license": "ISC",
