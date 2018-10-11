@@ -1,0 +1,15 @@
+{
+  "name": "floatlayout",
+  "version": "1.0.0",
+  "description": "Float Layout",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "scripts": {
+    "compile:sass": "node-sass main.scss style.css -w"
+  },
+  "author": "Harmandeep Singh",
+  "license": "ISC"
+}
