@@ -70,6 +70,14 @@
         right:2rem;
         text-align: right;
     }
+
+    &__heading-span{
+        padding:1rem 1.5rem;
+
+        &__--1{
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light,.85),rgba($color-secondary-dark,0.85));
+        }
+    }
 }
 
 
