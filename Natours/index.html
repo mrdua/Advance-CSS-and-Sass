@@ -17,7 +17,9 @@
         <div class="navigation">
             <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
 
-            <label for="nav-toggle" class="navigation__button">MENU</label>
+            <label for="nav-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
 
             <div class="navigation__background">&nbsp;</div>
 
@@ -44,7 +46,7 @@
                     <span class="heading-primary--sub">is where life happens</span>
                 </h1>
 
-                <a href="#" class="btn btn--white btn--animated">Discover Outdoors</a>
+                <a href="#section-tours" class="btn btn--white btn--animated">Discover Outdoors</a>
             </div>
         </header>
 
@@ -119,7 +121,7 @@
                 </div>
             </section>
 
-            <section class="section-tours">
+            <section class="section-tours" id="section-tours">
                     <div class="u-center-text u-margin-bottom-big">
                         <h2 class="heading-secondary">
                             Most popular tours
@@ -133,11 +135,7 @@
                                         &nbsp;
                                     </div>
                                     <h4 class="card__heading">
-<<<<<<< HEAD
-                                        <span class="card__heading-span card__heading-span--1">Explore the sea</span>
-=======
                                         <span class="card__heading-span card__heading-span--1">The Sea Explorer</span>
->>>>>>> 0831df84db61cb97cb52a9a7a7cdd70a6dc04a83
                                     </h4>
                                     <div class="card__details">
                                         <ul>
@@ -155,7 +153,7 @@
                                             <p class="card__price-only">Only</p>
                                             <p class="card__price-value">$279 </p>
                                         </div>
-                                        <a href="#" class="btn btn--white">Book Now!</a>
+                                        <a href="#popup" class="btn btn--white">Book Now!</a>
                                     </div>
                                 </div>
                             </div>
@@ -185,7 +183,7 @@
                                             <p class="card__price-only">Only</p>
                                             <p class="card__price-value">$602</p>
                                         </div>
-                                        <a href="#" class="btn btn--white">Book Now!</a>
+                                        <a href="#popup" class="btn btn--white">Book Now!</a>
                                     </div>
                                 </div>
                             </div>
@@ -215,7 +213,7 @@
                                             <p class="card__price-only">Only</p>
                                             <p class="card__price-value">$829 </p>
                                         </div>
-                                        <a href="#" class="btn btn--white">Book Now!</a>
+                                        <a href="#popup" class="btn btn--white">Book Now!</a>
                                     </div>
                                 </div>
                             </div>
@@ -351,6 +349,25 @@
             </div>
         </footer>
 
+        <div class="popup" id="popup">
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img src="img/nat-6.jpg" alt="popupImage" class="popup__img">
+                    <img src="img/nat-7.jpg" alt="popupImage" class="popup__img">
+                </div>
+                <div class="popup__right">
+                    <a href="#section-tours" class="popup__close">&times;</a>
+                    <h2 class="heading-secondary u-margin-bottom-small">Start your booking now 
+                    </h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Important - Please read the terms and condition carefully</h3>
+                    <p class="popup__text">
+                        The hyphens CSS property specifies how words should be hyphenated when text wraps across multiple lines. You can prevent hyphenation entirely, use hyphenation in manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
+                        when text wraps across multiple lines. You can prevent hyphenation entirely, use hyphenation in manually-specified points within the text, or let the browser.The hyphens CSS property specifies how words should be hyphenated when text wraps across multiple lines. You can prevent hyphenation
+                    </p>
+                    <a href="#" class="btn btn--green">Book Now</a>
+                </div>
+            </div>
+        </div>
 
 
 

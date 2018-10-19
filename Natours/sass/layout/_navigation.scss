@@ -13,7 +13,9 @@
         right: 6rem;
         background-color: $color-white;
         z-index: 2000;
-        box-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: .6)
+        box-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: .6);
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background{
@@ -40,7 +42,7 @@
 
         opacity: 0;
         width: 0;
-        transition: all .8s cubic-bezier(0.37,-0.53, 0.58, 2.26);
+        transition: all .8s cubic-bezier(0.37,-0.53, 0.58, 1.86);
     }
 
     &__list{
@@ -51,12 +53,12 @@
         list-style: none;
         text-align: center;
         width: 100%;
+        backface-visibility: hidden;
 
     }
 
     &__item{
         margin: 1rem;
-
     }
 
     &__link{
@@ -87,6 +89,7 @@
         }
     }
 
+    //Background expand and navigation
     &__checkbox:checked ~ &__background{
         transform: scale(100);
     }
@@ -94,5 +97,52 @@
     &__checkbox:checked ~ &__nav{
         opacity: 1;
         width: 100%;
+    }
+
+    //navigation Icon
+    &__icon{
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::after,
+        &::before{
+            width: 3rem;
+            height: 2px;
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+        }
+        &::after,
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s ease;
+        }
+
+        &::after{
+            top: 0.8rem;
+        }
+        &::before{
+            top: -0.8rem;
+        }
+    }
+
+    &__button:hover &__icon::before{
+        top: -1rem;
+        // transform-origin: center;
+    }
+    &__button:hover &__icon::after{top: 1rem;}
+
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+    }
+    &__checkbox:checked + &__button &__icon::before{
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &__checkbox:checked + &__button &__icon::after{
+        top:0;
+        transform: rotate(-135deg);
     }
 }
