@@ -12,3 +12,27 @@
     left: 50%;
     transform: translate(-50%,-50%);
 }
+/*
+// Breakpooint Choices
+// -phone
+// -tablet-port
+// -tablet-land
+// -big-desktop
+
+Order : Base + Typography > general layout(nav) + grid > pageLayout > components
+
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone{
+        @media (max-width: 37.5em) {@content};//600px/16px = 37.5em
+    }    
+    @if $breakpoint == tablet-port{
+        @media (max-width: 56.25em) {@content};//900px
+    }   
+    @if $breakpoint == tablet-land{
+        @media (max-width: 75em) {@content};//1200px
+    }    
+    @if $breakpoint == big-desktop{
+        @media (min-width: 112em) {@content};//1800px
+    }
+}
