@@ -60,9 +60,9 @@
             background-image: linear-gradient(to right bottom, rgba($color-secondary-light,.8),rgba($color-secondary-dark,.8)),
             url(../img/nat-5-small.jpg);
 
-            @media (min-resolution:192dpi) and (min-width:37.5em),
-                    (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
-                    (min-width:125em){
+            @media only screen and (min-resolution:2dppx) and (min-width:37.5em),
+            only screen and (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
+            only screen and (min-width:125em){
                 background-image: linear-gradient(to right bottom, rgba($color-secondary-light,.8),rgba($color-secondary-dark,.8)),
             url(../img/nat-5.jpg);
             }
@@ -72,9 +72,9 @@
             background-image: linear-gradient(to right bottom, rgba($color-primary-light,.8),rgba($color-primary-dark,.8)),
             url(../img/nat-6-small.jpg);
 
-            @media (min-resolution:192dpi) and (min-width:37.5em),
-            (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
-            (min-width:125em){
+            @media only screen and (min-resolution:2dppx) and (min-width:37.5em),
+            only screen and (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
+            only screen and (min-width:125em){
                 background-image: linear-gradient(to right bottom, rgba($color-primary-light,.8),rgba($color-primary-dark,.8)),
             url(../img/nat-6.jpg);
             }
@@ -84,9 +84,9 @@
             background-image: linear-gradient(to right bottom, rgba($color-tertiary-light,.8),rgba($color-tertiary-dark,.8)),
             url(../img/nat-7-small.jpg);
 
-            @media (min-resolution:192dpi) and (min-width:37.5em),
-            (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
-            (min-width:125em){
+            @media only screen and  (min-resolution:2dppx) and (min-width:37.5em),
+            only screen and (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
+            only screen and (min-width:125em){
                 background-image: linear-gradient(to right bottom, rgba($color-tertiary-light,.8),rgba($color-tertiary-dark,.8)),
             url(../img/nat-7.jpg);
             }
@@ -176,7 +176,8 @@
         }
     }
 
-    @include respond(tablet-port){
+    //@include respond(tablet-port){
+    @media only screen and (max-width: 56.25em),only screen and (hover:none){
         height: auto;
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black,.15);
