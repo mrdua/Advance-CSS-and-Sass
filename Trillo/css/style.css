@@ -64,6 +64,26 @@ body {
   background-color: #fff;
   flex: 1; }
 
+.detail {
+  font-size: 1.4rem;
+  display: flex;
+  padding: 4.5rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line); }
+
+.description {
+  background-color: #fff;
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  padding: 3rem;
+  box-shadow: var(--box-shadow-light); }
+
+.user-reviews {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .logo {
   height: 3.25rem;
   margin-left: 2rem; }
@@ -244,8 +264,13 @@ body {
   display: inline-block;
   cursor: pointer;
   transition: all .2s; }
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left .2s; }
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
+    .btn-inline:hover span {
+      margin-left: 8px; }
   .btn-inline:focus {
     outline: none;
     animation: pulsate 1s infinite; }
@@ -276,7 +301,10 @@ body {
   box-shadow: var(--box-shadow-light); }
 
 .user-reviews {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem; }
@@ -330,7 +358,7 @@ body {
   position: relative;
   overflow: hidden; }
   .review__text {
-    padding: 1rem;
+    padding: 1git rem;
     margin-bottom: 2rem;
     position: relative;
     z-index: 2; }
