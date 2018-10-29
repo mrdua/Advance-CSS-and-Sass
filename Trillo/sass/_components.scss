@@ -123,11 +123,69 @@
         top:1.6rem;
         right:1.2rem;
     }
+    
+    &__user{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
 
-    &__user:hover > *{
-        color: var(--color-grey-dark-1);                    
+        // background-color: var(--color-grey-light-4);
     }
 
+    &__field{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__panel{
+        cursor: pointer;
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        width: 100%;
+        z-index: 10;
+        // padding: 2rem;
+        background-color: var(--color-grey-light-1);
+
+
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item{
+        padding: 1.5rem 2rem;
+        
+        &:not(:last-child){
+            border-bottom: var(--line);
+        }
+    }
+
+    &__link:link,
+    &__link:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--color-grey-dark-3);
+    }
+
+    &__user:hover{
+        background-color: var(--color-grey-light-1);
+        color: var(--color-grey-dark-3);                   
+    }
+
+    &__user:hover &__panel{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__item:hover &__link{
+        color: var(--color-grey-dark-1);
+    }
     &__user-photo{
         height: 3.25rem;
         border-radius: 50%;
