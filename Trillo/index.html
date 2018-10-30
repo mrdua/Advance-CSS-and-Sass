@@ -25,7 +25,7 @@
                 </form>
 
                 <nav class="user-nav">
-                    <div class="user-nav__icon-box user-nav__icon-box--bookmark">
+                    <div class="user-nav__icon-box">
                         <div class="user-nav___field">
                             <svg class="user-nav__icon">
                                 <use xlink:href="img/sprite.svg#icon-bookmark"></use>
@@ -58,22 +58,70 @@
                                             <div class="user-nav__rating-count">470 votes</div>
                                     </div>
                                 </li>
+                                <li class="user-nav__item">
+                                        <img src="img/hotel-1.jpg" alt="hotel-1" class="user-nav__hotel-photo">
+                                        <h3 class="user-nav__hotel-heading">Taj Hotel</h3>
+                                        <div class="user-nav__rating">
+                                                <div class="user-nav__rating-average">8.2</div>
+                                                <div class="user-nav__rating-count">429 votes</div>
+                                        </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="user-nav__icon-box user-nav__icon-box--messages">
+                    <div class="user-nav__icon-box">
                         <div class="user-nav__field">
                             <svg class="user-nav__icon">
                                 <use xlink:href="img/sprite.svg#icon-chat"></use>
                             </svg>
                             <span class="user-nav__notification">13</span>
                         </div>
-                        <div class="user-nav__panel">
+                        <div class="user-nav__panel user-nav__panel--message">
                             <ul class="user-nav__list">
-                                <li class="user-nav__item"><a href="#" class="user-nav__link">Profile</a></li>
-                                <li class="user-nav__item"><a href="#" class="user-nav__link">Bookings</a></li>
-                                <li class="user-nav__item"><a href="#" class="user-nav__link">Setting</a></li>
-                                <li class="user-nav__item"><a href="#" class="user-nav__link">Logout</a></li>
+                                <li class="user-nav__item user-nav__item--unread">
+                                    <img src="img/user-1.jpg" alt="message-1" class="user-nav__message-photo">
+                                    <div class="user-nav__message-body">
+                                        <h3 class="user-nav__message-user">Will Smith</h3>
+                                        <p class="message-content">This is to inform you that your booking is now confirmed</p>
+                                    </div>
+                                    <div class="user-nav__message">
+                                        <div class="user-nav__message-time">12:42 PM</div>
+                                        <div class="user-nav__message-state user-nav__message-state--unread"></div>
+                                    </div>
+                                </li>
+                                <li class="user-nav__item user-nav__item--read">
+                                    <img src="img/user.jpg" alt="message-2" class="user-nav__message-photo">
+                                    <div class="user-nav__message-body">
+                                        <h3 class="user-nav__message-user">Trillo</h3>
+                                        <p class="message-content">Thanks! for joining the Trillo community</p>
+                                    </div>
+                                    <div class="user-nav__message">
+                                        <div class="user-nav__message-time">1:42 PM</div>
+                                        <div class="user-nav__message-state user-nav__message-state--read"></div>
+                                    </div>
+                                </li>
+                                <li class="user-nav__item user-nav__item--unread">
+                                    <img src="img/hotel-2.jpg" alt="message-3" class="user-nav__message-photo">
+                                    <div class="user-nav__message-body">
+                                        <h3 class="user-nav__message-user">Taj Palace</h3>
+                                        <p class="message-content">Please acknowledge your reporting time</p>
+                                    </div>
+                                    <div class="user-nav__message">
+                                        <div class="user-nav__message-time">2:42 AM</div>
+                                        <div class="user-nav__message-state user-nav__message-state--unread"></div>
+                                    </div>
+                                </li>
+                                <li class="user-nav__item user-nav__item--read">
+                                    <img src="img/user-5.jpg" alt="message-4" class="user-nav__message-photo">
+                                    <div class="user-nav__message-body">
+                                        <h3 class="user-nav__message-user">Ravindra Kumar</h3>
+                                        <p class="message-content">Thanks! for choosing us hope your experience was amazing</p>
+                                    </div>
+                                    <div class="user-nav__message">
+                                        <div class="user-nav__message-time">6:20 PM</div>
+                                        <div class="user-nav__message-state user-nav__message-state--read"></div>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </div>

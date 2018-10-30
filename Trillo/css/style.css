@@ -218,9 +218,13 @@ body {
     z-index: 10;
     background-color: var(--color-grey-light-1);
     visibility: hidden;
-    opacity: 0; }
+    opacity: 0;
+    height: 20rem;
+    overflow-y: scroll; }
     .user-nav__panel--bookmark {
       width: 30rem; }
+    .user-nav__panel--message {
+      width: 50rem; }
   .user-nav__list {
     list-style: none;
     display: flex;
@@ -228,31 +232,32 @@ body {
   .user-nav__item {
     display: flex;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    background-color: var(--color-grey-light-1);
+    color: var(--color-grey-dark-3); }
     .user-nav__item:not(:last-child) {
       border-bottom: var(--line); }
+    .user-nav__item--unread {
+      background-color: var(--color-grey-light-3); }
   .user-nav__link:link, .user-nav__link:visited {
     padding: 1rem 2rem;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--color-grey-dark-3); }
+  .user-nav__hotel-photo, .user-nav__message-photo {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-left: 1rem; }
   .user-nav__user:hover .user-nav__panel,
-  .user-nav__icon-box--bookmark:hover .user-nav__panel,
-  .user-nav__icon-box--messages:hover .user-nav__panel {
-    background-color: var(--color-grey-light-1);
-    color: var(--color-grey-dark-3);
+  .user-nav__icon-box:hover .user-nav__panel {
     visibility: visible;
     opacity: 1; }
   .user-nav__item:hover .user-nav__link {
     color: var(--color-grey-dark-1); }
   .user-nav__hotel-heading {
     padding: 2rem 1rem; }
-  .user-nav__hotel-photo {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    margin-left: 1rem; }
-  .user-nav__rating {
+  .user-nav__rating, .user-nav__message {
     margin-left: auto;
     display: flex;
     flex-direction: column;
@@ -261,14 +266,31 @@ body {
     align-self: stretch;
     background-color: var(--color-primary);
     color: #fff;
-    width: 8rem;
-    padding: 0 1rem; }
-    .user-nav__rating-average {
+    width: 8rem; }
+    .user-nav__rating-average, .user-nav__message-average {
       font-size: 2rem;
       font-weight: 300; }
-    .user-nav__rating-count {
+    .user-nav__rating-count, .user-nav__message-count {
       font-weight: 300;
       font-size: 1rem; }
+    .user-nav__rating-time, .user-nav__message-time {
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: .5rem; }
+    .user-nav__rating-state, .user-nav__message-state {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%; }
+      .user-nav__rating-state--read, .user-nav__message-state--read {
+        border: 2px solid #fff; }
+      .user-nav__rating-state--unread, .user-nav__message-state--unread {
+        background-color: #fff; }
+  .user-nav__message-body {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 60%;
+    padding: 1.5rem;
+    overflow: hidden; }
 
 .side-nav {
   list-style: none;
