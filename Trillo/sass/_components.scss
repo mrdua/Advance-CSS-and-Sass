@@ -147,22 +147,28 @@
     &__panel{
         cursor: pointer;
         position: absolute;
-        top: 6rem;
+        top: 7rem;
         right: 0;
-        width: 100%;
         z-index: 10;
-        // padding: 2rem;
         background-color: var(--color-grey-light-1);
         visibility: hidden;
         opacity: 0;
+
+        &--bookmark{
+            width: 30rem;
+        }
     }
 
     &__list {
         list-style: none;
+        display: flex;
+        flex-direction: column;
     }
 
     &__item{
-        padding: 1.5rem 2rem;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
         
         &:not(:last-child){
             border-bottom: var(--line);
@@ -171,24 +177,57 @@
 
     &__link:link,
     &__link:visited {
+        padding: 1rem 2rem;
         text-transform: uppercase;
         text-decoration: none;
         color: var(--color-grey-dark-3);
     }
 
-    &__user:hover{
+    &__user:hover &__panel,
+    &__icon-box--bookmark:hover &__panel,
+    &__icon-box--messages:hover &__panel{
         background-color: var(--color-grey-light-1);
-        color: var(--color-grey-dark-3);                   
-    }
-
-    &__user:hover &__panel{
+        color: var(--color-grey-dark-3);     
         visibility: visible;
-        opacity: 1;
+        opacity: 1;              
     }
 
     &__item:hover &__link{
         color: var(--color-grey-dark-1);
     }
+
+    &__hotel-heading{
+        padding: 2rem 1rem;
+    }
+
+    &__hotel-photo{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        margin-left: 1rem;
+    }
+    &__rating{
+        margin-left: auto;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-self:stretch;
+        background-color: var(--color-primary);
+        color:#fff;
+        width: 8rem;
+        padding: 0 1rem;
+
+        &-average{
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        &-count{
+            font-weight: 300;
+            font-size: 1rem;
+        }
+    }
+    
 
 }
 
