@@ -149,12 +149,17 @@
         position: absolute;
         top: 7rem;
         right: 0;
-        z-index: 10;
+        z-index: 20;
         background-color: var(--color-grey-light-1);
         visibility: hidden;
         opacity: 0;
         height: 20rem;
         overflow-y: scroll;
+
+        @media only screen and (max-width:$bp-5inch){
+            font-size: 1.1rem;
+            top: 4.5rem;
+        }
 
         &--bookmark{
             width: 30rem;
@@ -348,6 +353,10 @@
         @media only screen and (max-width:$bp-smallest){
             padding: 1rem 1.5rem;
         }
+        
+        @media only screen and (max-width:$bp-5inch){
+            padding: 1rem 1rem;
+        }
     }
 
     &__icon{
@@ -380,11 +389,40 @@
 
 .gallery{
     display: flex;
+    
+    &__item{
+        position:relative;
+    }
 
     &__photo{
         width: 100%;
         display: block;
+        transform:scale(1);
+        transition: all .3s;
     }
+
+    &__caption{
+        font-size: 2.5rem;
+        font-weight: 900;
+        color:#fff;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+        opacity:0;
+        transition: all .3s;
+    }
+
+    &__item:hover &__caption{
+        opacity:1;
+        transform: translate(-50%,-50%);
+    }
+    &__item:hover &__photo{
+        transform:scale(0.99);
+        filter: blur(5px) brightness(80%);
+    }
+
 }
 
 
