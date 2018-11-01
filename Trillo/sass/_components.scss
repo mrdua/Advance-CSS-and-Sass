@@ -122,6 +122,10 @@
         position: absolute;
         top:1.6rem;
         right:1.2rem;
+
+        @media only screen and (max-width:$bp-small){
+            top:0;
+        }
     }
     
     &__user{
@@ -148,14 +152,13 @@
         cursor: pointer;
         position: absolute;
         top: 7rem;
-        right: 0;
+        // right: 0;
         z-index: 20;
         background-color: var(--color-grey-light-1);
         visibility: hidden;
         opacity: 0;
         height: 20rem;
         overflow-y: scroll;
-
         @media only screen and (max-width:$bp-5inch){
             font-size: 1.1rem;
             top: 4.5rem;
@@ -163,10 +166,19 @@
 
         &--bookmark{
             width: 30rem;
+            right: -13rem;
+
+            // @media only screen and (max-width:$bp-5inch){
+            //     width: 30rem;
+            // }
         }
 
         &--message{
             width: 50rem;
+            right: -13.5rem;
+            @media only screen and (max-width:$bp-5inch){
+                width: 35rem;
+            }
         }
     }
 
@@ -205,6 +217,10 @@
         height: 5rem;
         border-radius: 50%;
         margin-left: 1rem;
+        @media only screen and (max-width:$bp-5inch){
+            width: 3rem;
+            height:3rem;
+        }
     }
 
     &__user:hover &__panel,
@@ -218,7 +234,10 @@
     }
 
     &__hotel-heading{
+        display: block;
         padding: 2rem 1rem;
+        flex: 0 0 60%;
+
     }
 
     &__rating,&__message{
@@ -235,15 +254,24 @@
         &-average{
             font-size: 2rem;
             font-weight: 300;
+            @media only screen and (max-width:$bp-5inch){
+                font-size: 1.6rem;
+            }
         }
         &-count{
             font-weight: 300;
             font-size: 1rem;
+            @media only screen and (max-width:$bp-5inch){
+                font-size: .8rem;
+            }
         }
         &-time{
             font-size: 1.5rem;
             font-weight: 300;
             margin-bottom: .5rem;
+            @media only screen and (max-width:$bp-5inch){
+                font-size: 1.2rem;
+            }
         }
         &-state{
             width: 1rem;
@@ -254,7 +282,6 @@
             }
             &--unread{
                 background-color: #fff;
-                
             }
         }
 
@@ -266,6 +293,10 @@
         flex: 0 0 60%;
         padding: 1.5rem;
         overflow: hidden;
+
+        @media only screen and (max-width:$bp-5inch){
+            flex: 0 0 65%;
+        }
     }
 
     
@@ -402,25 +433,30 @@
     }
 
     &__caption{
-        font-size: 2.5rem;
-        font-weight: 900;
+        font-size: 2rem;
+        font-weight: 300;
+        background-color: rgba(0,0,0,.4);
         color:#fff;
+        text-transform: uppercase;
         position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
+        bottom:0%;
+        left:0;
+        padding: .5rem 1rem;
+        border-left: 4px solid var(--color-primary);
+        // transform: translate(-50%,-50%);
         z-index: 2;
         opacity:0;
-        transition: all .3s;
+        transition: all .2s;
     }
 
     &__item:hover &__caption{
         opacity:1;
-        transform: translate(-50%,-50%);
+        // transform: translate(-50%,-50%);
     }
     &__item:hover &__photo{
-        transform:scale(0.99);
-        filter: blur(5px) brightness(80%);
+        // transform:scale(0.99);
+        // filter: blur(5px) brightness(80%);
+
     }
 
 }
@@ -432,6 +468,17 @@
     display: flex;
     align-items: center;
     border-bottom: var(--line);
+
+    @media only screen and (max-width:$bp-5inch){
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    & > * {
+        @media only screen and (max-width:$bp-5inch){
+            margin-bottom: 1rem;
+        }
+    }
 
     &__heading{
         font-size: 2.25rem;
@@ -446,11 +493,18 @@
             padding: .8rem;
         }
 
+        @media only screen and (max-width:$bp-5inch){
+            padding: 0;
+        }
+
     }
 
     &__stars{
         margin-right: auto;
         display: flex;
+        @media only screen and (max-width:$bp-5inch){
+            margin-right:0;
+        }
     }
 
     &__icon{
@@ -472,6 +526,7 @@
         font-size: 1.1rem;
         display: flex;
         align-items: stretch;
+        
     }
 
     &__rating{
@@ -488,6 +543,10 @@
 
         @media only screen and (max-width:$bp-small){
             margin-left: 2rem;
+        }
+
+        @media only screen and (max-width:$bp-5inch){
+            margin: 0;
         }
         
     }

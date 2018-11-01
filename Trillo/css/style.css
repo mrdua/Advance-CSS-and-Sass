@@ -197,6 +197,9 @@ body {
     position: absolute;
     top: 1.6rem;
     right: 1.2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .user-nav__notification {
+        top: 0; } }
   .user-nav__user {
     display: flex;
     flex-direction: column;
@@ -214,7 +217,6 @@ body {
     cursor: pointer;
     position: absolute;
     top: 7rem;
-    right: 0;
     z-index: 20;
     background-color: var(--color-grey-light-1);
     visibility: hidden;
@@ -226,9 +228,14 @@ body {
         font-size: 1.1rem;
         top: 4.5rem; } }
     .user-nav__panel--bookmark {
-      width: 30rem; }
+      width: 30rem;
+      right: -13rem; }
     .user-nav__panel--message {
-      width: 50rem; }
+      width: 50rem;
+      right: -13.5rem; }
+      @media only screen and (max-width: 26.25em) {
+        .user-nav__panel--message {
+          width: 35rem; } }
   .user-nav__list {
     list-style: none;
     display: flex;
@@ -253,6 +260,10 @@ body {
     height: 5rem;
     border-radius: 50%;
     margin-left: 1rem; }
+    @media only screen and (max-width: 26.25em) {
+      .user-nav__hotel-photo, .user-nav__message-photo {
+        width: 3rem;
+        height: 3rem; } }
   .user-nav__user:hover .user-nav__panel,
   .user-nav__icon-box:hover .user-nav__panel {
     visibility: visible;
@@ -260,7 +271,9 @@ body {
   .user-nav__item:hover .user-nav__link {
     color: var(--color-grey-dark-1); }
   .user-nav__hotel-heading {
-    padding: 2rem 1rem; }
+    display: block;
+    padding: 2rem 1rem;
+    flex: 0 0 60%; }
   .user-nav__rating, .user-nav__message {
     margin-left: auto;
     display: flex;
@@ -274,13 +287,22 @@ body {
     .user-nav__rating-average, .user-nav__message-average {
       font-size: 2rem;
       font-weight: 300; }
+      @media only screen and (max-width: 26.25em) {
+        .user-nav__rating-average, .user-nav__message-average {
+          font-size: 1.6rem; } }
     .user-nav__rating-count, .user-nav__message-count {
       font-weight: 300;
       font-size: 1rem; }
+      @media only screen and (max-width: 26.25em) {
+        .user-nav__rating-count, .user-nav__message-count {
+          font-size: .8rem; } }
     .user-nav__rating-time, .user-nav__message-time {
       font-size: 1.5rem;
       font-weight: 300;
       margin-bottom: .5rem; }
+      @media only screen and (max-width: 26.25em) {
+        .user-nav__rating-time, .user-nav__message-time {
+          font-size: 1.2rem; } }
     .user-nav__rating-state, .user-nav__message-state {
       width: 1rem;
       height: 1rem;
@@ -295,6 +317,9 @@ body {
     flex: 0 0 60%;
     padding: 1.5rem;
     overflow: hidden; }
+    @media only screen and (max-width: 26.25em) {
+      .user-nav__message-body {
+        flex: 0 0 65%; } }
 
 .side-nav {
   list-style: none;
@@ -382,27 +407,33 @@ body {
     transform: scale(1);
     transition: all .3s; }
   .gallery__caption {
-    font-size: 2.5rem;
-    font-weight: 900;
+    font-size: 2rem;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
+    text-transform: uppercase;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0%;
+    left: 0;
+    padding: .5rem 1rem;
+    border-left: 4px solid var(--color-primary);
     z-index: 2;
     opacity: 0;
-    transition: all .3s; }
+    transition: all .2s; }
   .gallery__item:hover .gallery__caption {
-    opacity: 1;
-    transform: translate(-50%, -50%); }
-  .gallery__item:hover .gallery__photo {
-    transform: scale(0.99);
-    filter: blur(5px) brightness(80%); }
+    opacity: 1; }
 
 .overview {
   display: flex;
   align-items: center;
   border-bottom: var(--line); }
+  @media only screen and (max-width: 26.25em) {
+    .overview {
+      flex-direction: column;
+      justify-content: space-between; } }
+  @media only screen and (max-width: 26.25em) {
+    .overview > * {
+      margin-bottom: 1rem; } }
   .overview__heading {
     font-size: 2.25rem;
     font-weight: 400;
@@ -413,9 +444,15 @@ body {
       .overview__heading {
         font-size: 1.5rem;
         padding: .8rem; } }
+    @media only screen and (max-width: 26.25em) {
+      .overview__heading {
+        padding: 0; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
+    @media only screen and (max-width: 26.25em) {
+      .overview__stars {
+        margin-right: 0; } }
   .overview__icon {
     width: 1.75rem;
     height: 1.75rem;
@@ -443,6 +480,9 @@ body {
     @media only screen and (max-width: 37.5em) {
       .overview__rating {
         margin-left: 2rem; } }
+    @media only screen and (max-width: 26.25em) {
+      .overview__rating {
+        margin: 0; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
